@@ -1,11 +1,16 @@
-const express = require('express')
-const app = express();
+const express = require('express');
 const cors = require('cors');
-const { builtinModules } = require('module');
 
-app.use(cors());
+const server = express();
+server.use(cors());
+server.use(express.json());
 
-app.get('/', (req, res) => res.send('Hello World!'));
+const Routes = require('')
 
+server.use('', )
 
-module.exports = app
+const port = process.env.PORT || 3000;
+
+server.get('/', (req, res) => res.send('Hello, world!'))
+
+module.exports = server
