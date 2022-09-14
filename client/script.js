@@ -4,7 +4,6 @@ const journalPost = document.querySelector("#journal-btn")
 journalPost.addEventListener('click', e => {
     e.preventDefault()
     postJournal(e)
-    fetchContent(e)
 })
 
 async function postJournal(e) {
