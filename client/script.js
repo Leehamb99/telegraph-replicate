@@ -1,18 +1,23 @@
 const journalPost = document.querySelector("#journal-btn")
+const form = document.querySelector(".user-input")
 
-
-journalPost.addEventListener('click', (e) => {
-    e.preventDefault()
-    postJournal()
+journalPost.addEventListener('click', e => {
+    postJournal(e);
+    e.preventDefault();
 })
 
 async function postJournal(e) {
     e.preventDefault()
+
     try {
         const options = {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(Object.fromEntries(new FormData(e.target)))
+            body: JSON.stringify({
+                name: document.querySelector('#username').value,
+                title: document.querySelector('#journal-name').value,
+                text: document.querySelector('#post-content').value
+            })
         }
 
         const response = await fetch('http://localhost:3000/blogs', options);
