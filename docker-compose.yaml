@@ -7,7 +7,7 @@ services:
       - 8080:8080
     volumes:
       - type: bind
-        source: ./
+        source: ./client
         target: /client
     working_dir: /client
     command: bash -c "npm install && npm run dev"
