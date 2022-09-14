@@ -12,25 +12,32 @@
 
 <body>
 
-</body>
 
-</html>
 <div class="header">
     <h2>Journal Entry</h2>
 </div>
 
 <div class="text-input-box">
-    <form class="user-input">
+    <form class="user-input" >
 
         <textarea name="username" id="username" maxlength="100" placeholder="Name.."></textarea>
         <textarea name="journal-title" id="journal-name" maxlength="100" placeholder="Title.."></textarea>
         <textarea class="input-area" name="" id="post-content" maxlength="1000" placeholder="Your story.."></textarea>
+        <textarea class="search-area" id="search" placeholder="Search for a blog.."></textarea>
 
         <div class="comment-box-buffer"></div>
         <div class="button-post-container">
             <button class="post-btn" id="journal-btn" type="submit" name="Post"> Post </button>
+            <button class="post-btn" id="search-btn" type="submit" name="Post"> Search </button>
         </div>
 
     </form>
 
+
 </div>
+
+<div class = "journal-area"></div>
+
+</body>
+
+</html>
