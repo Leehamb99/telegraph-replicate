@@ -2,7 +2,7 @@ const db = require('../dbConfig')
 
 class blogEntry {
     constructor(data){
-        this.is = data.id
+        this.id = data.id
         this.name = data.name
         this.title = data.title
         this.text = data.text
