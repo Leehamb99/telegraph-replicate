@@ -45,3 +45,5 @@ class blogEntry {
     }
 
 }
+
+module.exports = blogEntry

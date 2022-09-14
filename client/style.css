@@ -2,21 +2,38 @@
   body {
     text-align: center;
     align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+    ;
   }
   
   .text-input-box {
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
   
   .user-input {
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 35px;
 
+  }
+
+  .user-input > textarea{
+    border: none;
+    border-bottom: grey solid 1px;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+  .post-btn{
+    border: 2px black solid;
+    border-radius: 15px;
+    background-color: white;
+    margin: 20px;
+    padding: 6px
   }
   
   /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
