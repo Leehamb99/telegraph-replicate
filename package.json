@@ -1,0 +1,25 @@
+{
+  "name": "telegraph-replicate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon api2/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leehamb99/telegraph-replicate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leehamb99/telegraph-replicate/issues"
+  },
+  "homepage": "https://github.com/Leehamb99/telegraph-replicate#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
