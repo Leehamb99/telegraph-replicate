@@ -11,9 +11,9 @@ class blogEntry {
     static get all () {
         return new Promise (async(resolve,reject) => {
             try {
-                const blogData = await db.query('SELECT * FROM blogs;')
-                const blog = blogData.rows.map(b => new blogEntry(b));
-                resolve(blog);
+                const blogData = await db.query(`SELECT * FROM blogs;`)
+                const blogs = blogData.rows.map(b => new blogEntry(b));
+                resolve(blogs);
             } catch (err){
                 reject("Error retrieving blogs")
             }
@@ -35,7 +35,7 @@ class blogEntry {
     static create(name,title,text){
         return new Promise (async (resolve, reject) => {
             try {
-                let blogData = await db.query(`INSERT INTO blog (name, title,text) VALUES ($1, $2, $3) RETURNING *;`, [ name,title,text ]);
+                let blogData = await db.query(`INSERT INTO blogs (name,title,text) VALUES ($1, $2, $3) RETURNING *;`, [ name,title,text ]);
                 let newBlog = new blogEntry(blogData.rows[0]);
                 resolve (newBlog);
             } catch (err) {
