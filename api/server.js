@@ -5,12 +5,10 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
-const Routes = require('')
-
-server.use('', )
-
-const port = process.env.PORT || 3000;
-
+const blogRoutes = require('./controllers/blog')
 server.get('/', (req, res) => res.send('Hello, world!'))
+
+server.use('/blogs', blogRoutes )
+
 
 module.exports = server
