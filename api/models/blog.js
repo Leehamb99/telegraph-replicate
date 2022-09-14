@@ -11,9 +11,9 @@ class blogEntry {
     static get all () {
         return new Promise (async(resolve,reject) => {
             try {
-                const blogData = await db.query(`SELECT * FROM blogs`)
-                const blog = 
-                resolve(blogs);
+                const blogData = await db.query('SELECT * FROM blogs;')
+                const blog = blogData.rows.map(b => new blogEntry(b));
+                resolve(blog);
             } catch (err){
                 reject("Error retrieving blogs")
             }
