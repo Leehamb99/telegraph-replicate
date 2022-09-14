@@ -1,3 +1,5 @@
-const server = require('./app')
+const app = require("./server");
 
-server.listen(4000, () => console.log(`\nExpress departing now from port 4000!\n`))
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Express departed from port ${port}`))
