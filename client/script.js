@@ -1,8 +1,10 @@
 const journalPost = document.querySelector("#journal-btn")
 
 
-journalPost.addEventListener('click', e => {
-    postJournal(e)
+journalPost.addEventListener('click', (e) => {
+    e.preventDefault()
+    postJournal()
+
 })
 
 async function postJournal(e) {
